@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css'
 
 const Hooks = props => {
   const [counter, updateCounter] = useState(0);
@@ -9,7 +10,8 @@ const Hooks = props => {
 
   return (
     <>
-      <button 
+    <div className="container">
+      <button
         onClick={() => updateCounter(counter + 1)}
       >
        Increment counter
@@ -29,7 +31,10 @@ const Hooks = props => {
       >
         Reset counter
       </button>
+    </div>
+    <div className="counterContainer">
       <h1>{counter}</h1>
+    </div>
     </>
   )
 }
